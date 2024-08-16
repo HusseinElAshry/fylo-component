@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+.raleway{
+    font-family: "Raleway", sans-serif;
+}
+:root{
+    --main-color:#0c122c;
+    --dark-blue:#1d2c67;
+    --pale-blue:#dddbff;
+    --grayish-blue:#848794;
+    --first-pinky:#ffa399;
+    --second-pinky:#ff4d97;
+}
+.bg-lg-image{
+    background-image:url(../images/bg-desktop.png);
+    background-position:left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    
+}
+.bg-progress-bar{
+    background: linear-gradient(90deg, var(--first-pinky), var(--second-pinky));
+}
+.progress-bar-circle{
+    height: 0.8rem;
+    width: 0.8rem;
+    right: 0%;
+    transform: translateX(-0.15rem);
+}
+.bg-main{
+    background-color: var(--main-color);
+}
+.bg-dark-blue{
+    background-color: var(--dark-blue);
+}
+.text-grayish-blue{
+    color: var(--grayish-blue);
+}
+.text-pale-blue{
+    color: var(--pale-blue);
+}
+.text-dark-blue{
+    color: var(--dark-blue);
+}
+.icon{
+    width: 60px;
+    height:60px
+}
+.message::after{
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top:100%;
+    right: 0;
+    transform: translate(40%, 77%);
+    background: linear-gradient(45deg, var(--dark-blue) 0 50%, #fff 50% 100%);
+
+}
+.chat-message{
+    top: 0;
+    right:0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+
+}
+.vertical-align{
+    vertical-align: bottom;
+}
+@media screen and (max-width:992px){
+    .bg-lg-image{
+        display: none;
+    }
+    #storage{
+        background-image:url(../images/bg-desktop.png);
+        background-position:center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .chat-message{
+        border-bottom-right-radius: 5px;
+        top:100%;
+        left:50%;
+        width: fit-content;
+    }
+    .message::after{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .container{
+        width: 85%!important;
+    }
+
+}
